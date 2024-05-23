@@ -1,8 +1,0 @@
-app_identifier("zone.cloudmartin.DreamMegazin1") # The bundle identifier of your app
-apple_id("martin1216@naver.com") # Your Apple Developer Portal username
-
-itc_team_id("120693215") # App Store Connect Team ID
-team_id("R8D3UG9283") # Developer Portal Team ID
-
-# For more information about the Appfile, see:
-#     https://docs.fastlane.tools/advanced/#appfile
