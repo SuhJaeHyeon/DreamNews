@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA655CFD2BFED85000AA7B74 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA655CFC2BFED85000AA7B74 /* MainView.swift */; };
+		EA655D002BFED8D200AA7B74 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA655CFF2BFED8D200AA7B74 /* SettingView.swift */; };
+		EA655D042BFEEDE400AA7B74 /* dream.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA655D032BFEEDE400AA7B74 /* dream.txt */; };
 		EAFA3BEA2BFE15B900FAC58C /* DreamMegazinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFA3BE92BFE15B900FAC58C /* DreamMegazinApp.swift */; };
-		EAFA3BEC2BFE15B900FAC58C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFA3BEB2BFE15B900FAC58C /* ContentView.swift */; };
+		EAFA3BEC2BFE15B900FAC58C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFA3BEB2BFE15B900FAC58C /* LoginView.swift */; };
 		EAFA3BEE2BFE15BC00FAC58C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFA3BED2BFE15BC00FAC58C /* Assets.xcassets */; };
 		EAFA3BF12BFE15BC00FAC58C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFA3BF02BFE15BC00FAC58C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA655CFC2BFED85000AA7B74 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EA655CFF2BFED8D200AA7B74 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		EA655D032BFEEDE400AA7B74 /* dream.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dream.txt; sourceTree = "<group>"; };
 		EAFA3BE62BFE15B900FAC58C /* DreamMegazin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamMegazin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFA3BE92BFE15B900FAC58C /* DreamMegazinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamMegazinApp.swift; sourceTree = "<group>"; };
-		EAFA3BEB2BFE15B900FAC58C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EAFA3BEB2BFE15B900FAC58C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EAFA3BED2BFE15BC00FAC58C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAFA3BF02BFE15BC00FAC58C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EAFA3BF72BFE18EF00FAC58C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA655CFE2BFED88900AA7B74 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EAFA3BEB2BFE15B900FAC58C /* LoginView.swift */,
+				EA655CFC2BFED85000AA7B74 /* MainView.swift */,
+				EA655CFF2BFED8D200AA7B74 /* SettingView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		EAFA3BDD2BFE15B900FAC58C = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +68,11 @@
 		EAFA3BE82BFE15B900FAC58C /* DreamMegazin */ = {
 			isa = PBXGroup;
 			children = (
+				EA655CFE2BFED88900AA7B74 /* UI */,
+				EAFA3BF72BFE18EF00FAC58C /* Info.plist */,
 				EAFA3BE92BFE15B900FAC58C /* DreamMegazinApp.swift */,
-				EAFA3BEB2BFE15B900FAC58C /* ContentView.swift */,
 				EAFA3BED2BFE15BC00FAC58C /* Assets.xcassets */,
+				EA655D032BFEEDE400AA7B74 /* dream.txt */,
 				EAFA3BEF2BFE15BC00FAC58C /* Preview Content */,
 			);
 			path = DreamMegazin;
@@ -125,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA655D042BFEEDE400AA7B74 /* dream.txt in Resources */,
 				EAFA3BF12BFE15BC00FAC58C /* Preview Assets.xcassets in Resources */,
 				EAFA3BEE2BFE15BC00FAC58C /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAFA3BEC2BFE15B900FAC58C /* ContentView.swift in Sources */,
+				EA655CFD2BFED85000AA7B74 /* MainView.swift in Sources */,
+				EA655D002BFED8D200AA7B74 /* SettingView.swift in Sources */,
+				EAFA3BEC2BFE15B900FAC58C /* LoginView.swift in Sources */,
 				EAFA3BEA2BFE15B900FAC58C /* DreamMegazinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,14 +289,17 @@
 		EAFA3BF52BFE15BC00FAC58C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Planner;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DreamMegazin/Preview Content\"";
 				DEVELOPMENT_TEAM = R8D3UG9283;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DreamMegazin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FutureNews;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -285,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = zone.cloudmartin.DreamMegazin;
+				PRODUCT_BUNDLE_IDENTIFIER = zone.cloudmartin.DreamMegazin1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -296,14 +321,17 @@
 		EAFA3BF62BFE15BC00FAC58C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Planner;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DreamMegazin/Preview Content\"";
 				DEVELOPMENT_TEAM = R8D3UG9283;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DreamMegazin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FutureNews;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,7 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = zone.cloudmartin.DreamMegazin;
+				PRODUCT_BUNDLE_IDENTIFIER = zone.cloudmartin.DreamMegazin1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
