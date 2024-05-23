@@ -20,7 +20,7 @@ struct SettingView: View {
             .onChange(of: isNotificationEnabled, { oldValue, newValue in
                 UserDefaults.standard.set(newValue, forKey: "isNotificationEnabled")
                 if newValue {
-                    schedule5MinuteIntervalNotifications()
+                    scheduleIntervalNotifications()
                 } else {
                     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                 }
@@ -30,7 +30,7 @@ struct SettingView: View {
         .onAppear {
             requestNotificationPermission()
             if isNotificationEnabled {
-                schedule5MinuteIntervalNotifications()
+                scheduleIntervalNotifications()
             }
         }
     }
@@ -63,33 +63,7 @@ struct SettingView: View {
         }
     }
     
-    func schedule5MinuteIntervalNotifications() {
-        let center = UNUserNotificationCenter.current()
-        center.removeAllPendingNotificationRequests()
-        
-        for hour in 0..<24 {
-            for minute in stride(from: 0, to: 60, by: 5) {
-                let content = UNMutableNotificationContent()
-                content.title = "5-Minute Reminder"
-                content.body = "This is your 5-minute interval notification."
-                content.sound = .default
-                
-                var dateComponents = DateComponents()
-                dateComponents.hour = hour
-                dateComponents.minute = minute
-                
-                let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-                let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-                
-                center.add(request) { error in
-                    if let error = error {
-                        print("Error scheduling notification: \(error)")
-                    }
-                }
-            }
-        }
-    }
-    func schedule1MinuteIntervalNotifications() {
+    func scheduleIntervalNotifications() {
         let center = UNUserNotificationCenter.current()
         center.removeAllPendingNotificationRequests()
         
@@ -98,7 +72,7 @@ struct SettingView: View {
         content.body = "꿈이 도착했습니다"
         content.sound = .default
  
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 300, repeats: true)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         
         center.add(request) { error in
