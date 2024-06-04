@@ -1,29 +1,31 @@
 //
-//  ContentView.swift
+//  SignUpView.swift
 //  DreamMegazin
 //
-//  Created by JaehyeonS on 5/22/24.
+//  Created by JaehyeonS on 5/31/24.
 //
 
 import SwiftUI
 import FirebaseAuth
 
-struct LoginView: View {
-    @State private var username: String = ""
+struct SignUpView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @State private var email: String = ""
     @State private var password: String = ""
-    @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
+    @State private var confirmPassword: String = ""
     @State private var errorMessage: String?
-    @State private var showSignUp = false
+    
     
     var body: some View {
-        if isLoggedIn {
-            MainView()
-        } else {
+        NavigationView {
             VStack {
-                TextField("Username", text: $username)
+                TextField("Email", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 SecureField("Password", text: $password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                SecureField("Confirm Password", text: $confirmPassword)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 if let errorMessage = errorMessage {
@@ -32,43 +34,41 @@ struct LoginView: View {
                         .padding()
                 }
                 Button(action: {
-                    login()
+                    signUp()
                 }) {
-                    Text("Login")
+                    Text("Sign Up")
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.blue)
                         .cornerRadius(10)
                 }
                 .padding()
-                Button(action: {
-                    showSignUp.toggle()
-                }) {
-                    Text("Sign Up")
-                        .foregroundColor(.blue)
-                        .padding()
-                }
-                .sheet(isPresented: $showSignUp) {
-                    SignUpView()
-                }
-                .padding()
             }
             .padding()
+            .navigationBarTitle("Sign Up", displayMode: .inline)
+            .navigationBarItems(trailing: Button("Cancel") {
+                presentationMode.wrappedValue.dismiss()
+            })
         }
     }
     
-    func login() {
-        Auth.auth().signIn(withEmail: username, password: password) { authResult, error in
+    func signUp() {
+        guard password == confirmPassword else {
+            errorMessage = "Passwords do not match"
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 errorMessage = error.localizedDescription
                 return
             }
-            // 로그인 성공
-            isLoggedIn = true
+            // 회원가입 성공
+            presentationMode.wrappedValue.dismiss()
         }
     }
 }
 
 #Preview {
-    LoginView()
+    SignUpView()
 }

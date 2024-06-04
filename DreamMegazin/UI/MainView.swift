@@ -1,4 +1,5 @@
 import SwiftUI
+import FirebaseAuth
 
 struct MainView: View {
     @State private var dreamText: String = ""
@@ -6,7 +7,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HStack{ 
+                HStack{
                     NavigationLink(destination: SettingView()) {
                         Text("Settings")
                             .foregroundColor(.white)
@@ -17,15 +18,13 @@ struct MainView: View {
                     .padding()
                     Button(
                         action: {
-                            UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                            logout()
                         }){
-                            NavigationLink(destination: SettingView()) {
-                                Text("Logout")
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .background(Color.blue)
-                                    .cornerRadius(10)
-                            }
+                            Text("Logout")
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.blue)
+                                .cornerRadius(10)
                         }
                     .padding()
                 }
@@ -50,6 +49,17 @@ struct MainView: View {
             }
         }
     }
+    
+    
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+            UserDefaults.standard.set(false, forKey: "isLoggedIn")
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+    }
+    
     func loadDreamText() {
         if let filePath = Bundle.main.path(forResource: "dream", ofType: "txt") {
             do {

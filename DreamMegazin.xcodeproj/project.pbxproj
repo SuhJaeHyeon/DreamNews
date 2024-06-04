@@ -10,6 +10,7 @@
 		EA655CFD2BFED85000AA7B74 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA655CFC2BFED85000AA7B74 /* MainView.swift */; };
 		EA655D002BFED8D200AA7B74 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA655CFF2BFED8D200AA7B74 /* SettingView.swift */; };
 		EA655D042BFEEDE400AA7B74 /* dream.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA655D032BFEEDE400AA7B74 /* dream.txt */; };
+		EAF0D23F2C0E992D00B3D011 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF0D23E2C0E992D00B3D011 /* SignUpView.swift */; };
 		EAFA3BEA2BFE15B900FAC58C /* DreamMegazinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFA3BE92BFE15B900FAC58C /* DreamMegazinApp.swift */; };
 		EAFA3BEC2BFE15B900FAC58C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFA3BEB2BFE15B900FAC58C /* LoginView.swift */; };
 		EAFA3BEE2BFE15BC00FAC58C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFA3BED2BFE15BC00FAC58C /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		EA655CFC2BFED85000AA7B74 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EA655CFF2BFED8D200AA7B74 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		EA655D032BFEEDE400AA7B74 /* dream.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dream.txt; sourceTree = "<group>"; };
+		EAF0D23E2C0E992D00B3D011 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		EAFA3BE62BFE15B900FAC58C /* DreamMegazin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamMegazin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFA3BE92BFE15B900FAC58C /* DreamMegazinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamMegazinApp.swift; sourceTree = "<group>"; };
 		EAFA3BEB2BFE15B900FAC58C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 				EAFA3BEB2BFE15B900FAC58C /* LoginView.swift */,
 				EA655CFC2BFED85000AA7B74 /* MainView.swift */,
 				EA655CFF2BFED8D200AA7B74 /* SettingView.swift */,
+				EAF0D23E2C0E992D00B3D011 /* SignUpView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA655CFD2BFED85000AA7B74 /* MainView.swift in Sources */,
+				EAF0D23F2C0E992D00B3D011 /* SignUpView.swift in Sources */,
 				EA655D002BFED8D200AA7B74 /* SettingView.swift in Sources */,
 				EAFA3BEC2BFE15B900FAC58C /* LoginView.swift in Sources */,
 				EAFA3BEA2BFE15B900FAC58C /* DreamMegazinApp.swift in Sources */,
