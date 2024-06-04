@@ -4,34 +4,94 @@
 //
 //  Created by JaehyeonS on 5/23/24.
 //
-
 import SwiftUI
+import WebKit
+
+import FirebaseAuth
 import UserNotifications
 
 struct SettingView: View {
     @AppStorage("isNotificationEnabled") private var isNotificationEnabled: Bool = false
-     
+    
+    @Environment(\.presentationMode) var presentationMode
+    @State private var isSwitchOn = false
+    @State private var showWebView = false
     var body: some View {
-        VStack {
-            Toggle(isOn: $isNotificationEnabled) {
-                Text("Enable 1-Minute Interval Notifications")
-            }
-            .padding()
-            .onChange(of: isNotificationEnabled, { oldValue, newValue in
-                UserDefaults.standard.set(newValue, forKey: "isNotificationEnabled")
-                if newValue {
-                    scheduleIntervalNotifications()
-                } else {
-                    UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            NavigationView {
+                List {
+                    Section(header: Text("설정 1")) {
+                        Toggle(isOn: $isSwitchOn) {
+                            Text("push 알람 오도록 설정")
+                        }
+                        .onChange(of: isNotificationEnabled, { oldValue, newValue in
+                            UserDefaults.standard.set(newValue, forKey: "isNotificationEnabled")
+                            if newValue {
+                                scheduleIntervalNotifications()
+                            } else {
+                                UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                            }
+                        })
+                        
+                        Button(action: {
+                            self.showWebView = true
+                        }) {
+                            Text("바텐더리그 열기")
+                        }
+                        .sheet(isPresented: $showWebView) {
+                            WebView(url: URL(string: "https://www.example.com")!)
+                        }
+                    }
+                    Section(header: Text("설정 2")) {
+                        Button(action: {
+                            self.showWebView = true
+                        }) {
+                            Text("웹뷰 열기")
+                        }
+                        .sheet(isPresented: $showWebView) {
+                            WebView(url: URL(string: "https://martin1216.shop")!)
+                        }
+                    }
+                    Section {
+                        HStack {
+                            Text("버전")
+                            Spacer()
+                            Text(appVersion)
+                                .foregroundColor(.gray)
+                        }
+                        Button(action: {
+                            logout()
+                            print("로그아웃 버튼 클릭됨")
+                        }) {
+                            Text("로그아웃")
+                                .foregroundColor(.red)
+                        }
+                    }
                 }
-            })
-        }
-        .navigationTitle("Settings")
-        .onAppear {
-            requestNotificationPermission()
-            if isNotificationEnabled {
-                scheduleIntervalNotifications()
+                .navigationBarTitle("설정", displayMode: .inline)
+                .navigationBarItems(leading: Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Image(systemName: "arrow.left")
+                        .imageScale(.large)
+                })
             }
+            .onAppear {
+                requestNotificationPermission()
+                if isNotificationEnabled {
+                    scheduleIntervalNotifications()
+                }
+            }
+        }
+    
+    
+    
+    
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+            UserDefaults.standard.set(false, forKey: "isLoggedIn")
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
         }
     }
     
@@ -80,6 +140,28 @@ struct SettingView: View {
                 print("Error scheduling notification: \(error)")
             }
         }
+    }
+    var appVersion: String {
+           if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+               return version
+           } else {
+               return "1.0"
+           }
+       }
+}
+
+struct WebView: UIViewRepresentable {
+    let url: URL
+    
+    func makeUIView(context: Context) -> some UIView {
+        let webView = WKWebView()
+        let request = URLRequest(url: url)
+        webView.load(request)
+        return webView
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        // No update needed
     }
 }
 

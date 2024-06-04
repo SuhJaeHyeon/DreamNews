@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C548F12B9C6F45333935846 /* Pods_DreamMegazin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B42BCE03E5B2D6B58AA4040 /* Pods_DreamMegazin.framework */; };
 		EA655CFD2BFED85000AA7B74 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA655CFC2BFED85000AA7B74 /* MainView.swift */; };
 		EA655D002BFED8D200AA7B74 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA655CFF2BFED8D200AA7B74 /* SettingView.swift */; };
 		EA655D042BFEEDE400AA7B74 /* dream.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA655D032BFEEDE400AA7B74 /* dream.txt */; };
 		EAF0D23F2C0E992D00B3D011 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF0D23E2C0E992D00B3D011 /* SignUpView.swift */; };
+		EAF0D2412C0EC05500B3D011 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAF0D2402C0EC05500B3D011 /* GoogleService-Info.plist */; };
+		EAF0D2432C0EC61800B3D011 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF0D2422C0EC61800B3D011 /* MyPageView.swift */; };
+		EAF0D2452C0ED35400B3D011 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF0D2442C0ED35400B3D011 /* NewsView.swift */; };
+		EAF0D2472C0ED36200B3D011 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF0D2462C0ED36200B3D011 /* HistoryView.swift */; };
+		EAF0D2492C0ED4D200B3D011 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF0D2482C0ED4D200B3D011 /* HistoryDetailView.swift */; };
 		EAFA3BEA2BFE15B900FAC58C /* DreamMegazinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFA3BE92BFE15B900FAC58C /* DreamMegazinApp.swift */; };
 		EAFA3BEC2BFE15B900FAC58C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFA3BEB2BFE15B900FAC58C /* LoginView.swift */; };
 		EAFA3BEE2BFE15BC00FAC58C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFA3BED2BFE15BC00FAC58C /* Assets.xcassets */; };
@@ -18,10 +24,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B42BCE03E5B2D6B58AA4040 /* Pods_DreamMegazin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamMegazin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56EC132196228824580B8374 /* Pods-DreamMegazin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamMegazin.debug.xcconfig"; path = "Target Support Files/Pods-DreamMegazin/Pods-DreamMegazin.debug.xcconfig"; sourceTree = "<group>"; };
+		7B507582BE96A4FFD3EB5045 /* Pods-DreamMegazin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamMegazin.release.xcconfig"; path = "Target Support Files/Pods-DreamMegazin/Pods-DreamMegazin.release.xcconfig"; sourceTree = "<group>"; };
 		EA655CFC2BFED85000AA7B74 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EA655CFF2BFED8D200AA7B74 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		EA655D032BFEEDE400AA7B74 /* dream.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dream.txt; sourceTree = "<group>"; };
 		EAF0D23E2C0E992D00B3D011 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		EAF0D2402C0EC05500B3D011 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EAF0D2422C0EC61800B3D011 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		EAF0D2442C0ED35400B3D011 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		EAF0D2462C0ED36200B3D011 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		EAF0D2482C0ED4D200B3D011 /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
 		EAFA3BE62BFE15B900FAC58C /* DreamMegazin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamMegazin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFA3BE92BFE15B900FAC58C /* DreamMegazinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamMegazinApp.swift; sourceTree = "<group>"; };
 		EAFA3BEB2BFE15B900FAC58C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -35,12 +49,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C548F12B9C6F45333935846 /* Pods_DreamMegazin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C9576A4FD6A72B141C0159E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B42BCE03E5B2D6B58AA4040 /* Pods_DreamMegazin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC010D20AA84E9A918035AEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56EC132196228824580B8374 /* Pods-DreamMegazin.debug.xcconfig */,
+				7B507582BE96A4FFD3EB5045 /* Pods-DreamMegazin.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EA655CFE2BFED88900AA7B74 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -48,6 +80,10 @@
 				EA655CFC2BFED85000AA7B74 /* MainView.swift */,
 				EA655CFF2BFED8D200AA7B74 /* SettingView.swift */,
 				EAF0D23E2C0E992D00B3D011 /* SignUpView.swift */,
+				EAF0D2422C0EC61800B3D011 /* MyPageView.swift */,
+				EAF0D2442C0ED35400B3D011 /* NewsView.swift */,
+				EAF0D2462C0ED36200B3D011 /* HistoryView.swift */,
+				EAF0D2482C0ED4D200B3D011 /* HistoryDetailView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -57,6 +93,8 @@
 			children = (
 				EAFA3BE82BFE15B900FAC58C /* DreamMegazin */,
 				EAFA3BE72BFE15B900FAC58C /* Products */,
+				CC010D20AA84E9A918035AEF /* Pods */,
+				8C9576A4FD6A72B141C0159E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +111,7 @@
 			children = (
 				EA655CFE2BFED88900AA7B74 /* UI */,
 				EAFA3BF72BFE18EF00FAC58C /* Info.plist */,
+				EAF0D2402C0EC05500B3D011 /* GoogleService-Info.plist */,
 				EAFA3BE92BFE15B900FAC58C /* DreamMegazinApp.swift */,
 				EAFA3BED2BFE15BC00FAC58C /* Assets.xcassets */,
 				EA655D032BFEEDE400AA7B74 /* dream.txt */,
@@ -96,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAFA3BF42BFE15BC00FAC58C /* Build configuration list for PBXNativeTarget "DreamMegazin" */;
 			buildPhases = (
+				517901132A965E67843ED603 /* [CP] Check Pods Manifest.lock */,
 				EAFA3BE22BFE15B900FAC58C /* Sources */,
 				EAFA3BE32BFE15B900FAC58C /* Frameworks */,
 				EAFA3BE42BFE15B900FAC58C /* Resources */,
+				28E39027AF0D08FE9573D148 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA655D042BFEEDE400AA7B74 /* dream.txt in Resources */,
+				EAF0D2412C0EC05500B3D011 /* GoogleService-Info.plist in Resources */,
 				EAFA3BF12BFE15BC00FAC58C /* Preview Assets.xcassets in Resources */,
 				EAFA3BEE2BFE15BC00FAC58C /* Assets.xcassets in Resources */,
 			);
@@ -155,16 +197,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28E39027AF0D08FE9573D148 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DreamMegazin/Pods-DreamMegazin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DreamMegazin/Pods-DreamMegazin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DreamMegazin/Pods-DreamMegazin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		517901132A965E67843ED603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreamMegazin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EAFA3BE22BFE15B900FAC58C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EA655CFD2BFED85000AA7B74 /* MainView.swift in Sources */,
+				EAF0D2472C0ED36200B3D011 /* HistoryView.swift in Sources */,
 				EAF0D23F2C0E992D00B3D011 /* SignUpView.swift in Sources */,
 				EA655D002BFED8D200AA7B74 /* SettingView.swift in Sources */,
+				EAF0D2492C0ED4D200B3D011 /* HistoryDetailView.swift in Sources */,
+				EAF0D2452C0ED35400B3D011 /* NewsView.swift in Sources */,
 				EAFA3BEC2BFE15B900FAC58C /* LoginView.swift in Sources */,
 				EAFA3BEA2BFE15B900FAC58C /* DreamMegazinApp.swift in Sources */,
+				EAF0D2432C0EC61800B3D011 /* MyPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +380,7 @@
 		};
 		EAFA3BF52BFE15BC00FAC58C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56EC132196228824580B8374 /* Pods-DreamMegazin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Planner;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +390,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DreamMegazin/Preview Content\"";
 				DEVELOPMENT_TEAM = R8D3UG9283;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamMegazin/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "오늘의 꿈";
@@ -324,6 +414,7 @@
 		};
 		EAFA3BF62BFE15BC00FAC58C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B507582BE96A4FFD3EB5045 /* Pods-DreamMegazin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Planner;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -333,6 +424,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DreamMegazin/Preview Content\"";
 				DEVELOPMENT_TEAM = R8D3UG9283;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamMegazin/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "오늘의 꿈";

@@ -1,75 +1,24 @@
 import SwiftUI
-import FirebaseAuth
 
 struct MainView: View {
-    @State private var dreamText: String = ""
     
     var body: some View {
-        NavigationView {
-            VStack {
-                HStack{
-                    NavigationLink(destination: SettingView()) {
-                        Text("Settings")
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                    }
-                    .padding()
-                    Button(
-                        action: {
-                            logout()
-                        }){
-                            Text("Logout")
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color.blue)
-                                .cornerRadius(10)
-                        }
-                    .padding()
+        TabView {
+            NewsView()
+                .tabItem {
+                    Image(systemName: "doc")
+                    Text("뉴스")
                 }
-                Text("준호의 꿈")
-                    .font(.largeTitle)
-                    .padding()
-                if dreamText.isEmpty {
-                    Text("Loading...")
-                        .font(.largeTitle)
-                        .padding()
-                } else {
-                    ScrollView {
-                       Text(dreamText)
-                           .font(.body)
-                           .padding()
-                   }
-                   .frame(maxWidth: .infinity, maxHeight: .infinity)
+            HistoryView()
+                .tabItem {
+                    Image(systemName: "clock")
+                    Text("히스토리")
                 }
-            }
-            .onAppear {
-                loadDreamText()
-            }
-        }
-    }
-    
-    
-    func logout() {
-        do {
-            try Auth.auth().signOut()
-            UserDefaults.standard.set(false, forKey: "isLoggedIn")
-        } catch let signOutError as NSError {
-            print("Error signing out: %@", signOutError)
-        }
-    }
-    
-    func loadDreamText() {
-        if let filePath = Bundle.main.path(forResource: "dream", ofType: "txt") {
-            do {
-                let contents = try String(contentsOfFile: filePath)
-                dreamText = contents
-            } catch {
-                dreamText = "Failed to load content."
-            }
-        } else {
-            dreamText = "File not found."
+            MyPageView()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("마이 페이지")
+                }
         }
     }
 }
