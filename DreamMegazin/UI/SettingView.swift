@@ -20,17 +20,21 @@ struct SettingView: View {
             NavigationView {
                 List {
                     Section(header: Text("설정 1")) {
-                        Toggle(isOn: $isSwitchOn) {
-                            Text("push 알람 오도록 설정")
-                        }
-                        .onChange(of: isNotificationEnabled, { oldValue, newValue in
-                            UserDefaults.standard.set(newValue, forKey: "isNotificationEnabled")
-                            if newValue {
-                                scheduleIntervalNotifications()
-                            } else {
-                                UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                        if #available(iOS 17.0, *) {
+                            Toggle(isOn: $isSwitchOn) {
+                                Text("push 알람 오도록 설정")
                             }
-                        })
+                            .onChange(of: isNotificationEnabled, { oldValue, newValue in
+                                UserDefaults.standard.set(newValue, forKey: "isNotificationEnabled")
+                                if newValue {
+                                    scheduleIntervalNotifications()
+                                } else {
+                                    UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                                }
+                            })
+                        } else {
+                            // Fallback on earlier versions
+                        }
                         
                         Button(action: {
                             self.showWebView = true

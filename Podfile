@@ -8,4 +8,5 @@ target 'DreamMegazin' do
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
   pod 'Alamofire'
+  pod 'OpenAIKit'
 end

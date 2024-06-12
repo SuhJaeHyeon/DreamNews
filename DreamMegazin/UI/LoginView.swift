@@ -17,7 +17,11 @@ struct LoginView: View {
     
     var body: some View {
         if isLoggedIn {
-            MainView()
+            if let savedDream = UserDefaults.standard.object(forKey: "dream") as? String {
+                MainView()
+            } else {
+                SettingView()
+            }
         } else {
             VStack {
                 TextField("Username", text: $username)
@@ -35,6 +39,18 @@ struct LoginView: View {
                     login()
                 }) {
                     Text("Login")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .padding()
+                Button(action: {
+                    username = "martin1216@naver.com"
+                    password = "saeha123"
+                    login()
+                }) {
+                    Text("Admin Login")
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.blue)
