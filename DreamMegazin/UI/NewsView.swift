@@ -35,16 +35,19 @@ struct NewsView: View {
     }
     
     func loadDreamText() {
-        if let filePath = Bundle.main.path(forResource: "dream", ofType: "txt") {
-            do {
-                let contents = try String(contentsOfFile: filePath)
-                dreamText = contents
-            } catch {
-                dreamText = "Failed to load content."
-            }
-        } else {
-            dreamText = "File not found."
-        }
+        dreamText = "준비중입니다"
+//        
+//        if let filePath = Bundle.main.path(forResource: "dream", ofType: "txt") {
+//            do {
+//                let contents = try String(contentsOfFile: filePath)
+//                dreamText = contents
+//            } catch {
+//                dreamText = "Failed to load content."
+//            }
+//        } else {
+//            dreamText = "File not found."
+//        }
+//        dreamText = "준비중입니다"
     }
 }
 

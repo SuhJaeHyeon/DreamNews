@@ -8,19 +8,29 @@
 import SwiftUI
 
 struct HistoryDetailView: View {
-    let historyItem: HistoryItem
-    
+    let historyItem: News
+
     var body: some View {
-        VStack {
-            Text(historyItem.date)
+        VStack(alignment: .leading, spacing: 10) {
+            Text(formatDate(historyItem.date))
+                .font(.headline)
+            
+            Text(historyItem.title)
                 .font(.title)
-                .padding()
             
             Text(historyItem.content)
-                .padding()
+                .font(.body)
             
             Spacer()
         }
-        .navigationBarTitle("상세 보기", displayMode: .inline)
+        .padding()
+        .navigationTitle("상세 보기")
     }
+}
+
+// 날짜 형식을 지정하는 함수
+func formatDate(_ date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    return formatter.string(from: date)
 }

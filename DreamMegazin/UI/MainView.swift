@@ -9,15 +9,20 @@ struct MainView: View {
                     Image(systemName: "doc")
                     Text("뉴스")
                 }
-            ChatGPTView()
-                .tabItem {
-                    Image(systemName: "arrow.down.forward.and.arrow.up.backward")
-                    Text("ChatGPT")
-                }
             HistoryView()
                 .tabItem {
                     Image(systemName: "clock")
                     Text("히스토리")
+                }
+            TodoView()
+                .tabItem {
+                    Image(systemName: "checkmark")
+                    Text("오늘 만들기")
+                }
+            ChatGPTView()
+                .tabItem {
+                    Image(systemName: "bubble.left.and.bubble.right.fill")
+                    Text("ChatGPT")
                 }
             MyPageView()
                 .tabItem {

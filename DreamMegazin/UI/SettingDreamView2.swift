@@ -13,26 +13,27 @@ struct SettingDreamView2: View {
     @State private var isNextActive: Bool = false
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20, content: {
-            VStack(content: {
-                Text("당신의 꿈은 언제 이루어지나요?")
-                TextField("목표 기간을 입력하세요", text: $dream)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-            })
-            .padding(.top, 100)
-            
-            Text("예시로 선택할 수 있어요:")
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], spacing: 10) {
-                ForEach(examples, id: \.self) { example in
-                    ExampleButton(title: example, action: {
-                        dream = example
-                    })
+        if isNextActive {
+            MainView()
+        } else {
+            VStack(alignment: .leading, spacing: 20, content: {
+                VStack(content: {
+                    Text("당신의 꿈은 언제 이루어지나요?")
+                    TextField("목표 기간을 입력하세요", text: $dream)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                })
+                .padding(.top, 100)
+                
+                Text("예시로 선택할 수 있어요:")
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], spacing: 10) {
+                    ForEach(examples, id: \.self) { example in
+                        ExampleButton(title: example, action: {
+                            dream = example
+                        })
+                    }
                 }
-            }
-            Spacer()
-            
-            NavigationLink(destination: MainView(), isActive: $isNextActive) {
+                Spacer()
                 Button(action: {
                     UserDefaults.standard.set(dream, forKey: "Time")
                     isNextActive = true
@@ -44,10 +45,9 @@ struct SettingDreamView2: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-            }
-        })
-        .padding()
-        .navigationTitle("설정")
+            })
+            .padding()
+        }
     }
 }
 

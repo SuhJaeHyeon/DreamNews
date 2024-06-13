@@ -17,10 +17,10 @@ struct LoginView: View {
     
     var body: some View {
         if isLoggedIn {
-            if let savedDream = UserDefaults.standard.object(forKey: "dream") as? String {
+            if UserDefaults.standard.object(forKey: "dream") is String {
                 MainView()
             } else {
-                SettingView()
+                SettingDreamView()
             }
         } else {
             VStack {

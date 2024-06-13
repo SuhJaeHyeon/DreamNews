@@ -7,18 +7,8 @@
 
 import SwiftUI
 
-struct HistoryItem: Identifiable {
-    let id = UUID()
-    let date: String
-    let content: String
-}
-
 struct HistoryView: View {
-    @State private var historyItems = [
-        HistoryItem(date: "2024-06-01", content: "첫 번째 히스토리 내용입니다."),
-        HistoryItem(date: "2024-06-02", content: "두 번째 히스토리 내용입니다."),
-        HistoryItem(date: "2024-06-03", content: "세 번째 히스토리 내용입니다.")
-    ]
+    @State private var historyItems: [News] = []
     
     var body: some View {
         NavigationView {
@@ -28,17 +18,48 @@ struct HistoryView: View {
                 }
             }
             .navigationBarTitle("히스토리", displayMode: .inline)
+            .onAppear(perform: loadHistoryItems)
         }
+    }
+    
+    
+    // JSON 파일을 읽어오는 함수
+    func loadHistoryItems() {
+        let fileManager = FileManager.default
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.dateDecodingStrategy = .iso8601
+
+        let months = ["01", "02"]
+        var loadedItems: [News] = []
+
+        for month in months {
+            if let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
+                let fileURL = documentsDirectory.appendingPathComponent("news_\(month).json")
+                if fileManager.fileExists(atPath: fileURL.path) {
+                    do {
+                        let data = try Data(contentsOf: fileURL)
+                        let newsItems = try jsonDecoder.decode([News].self, from: data)
+                        loadedItems.append(contentsOf: newsItems)
+                    } catch {
+                        print("Failed to load or decode JSON for month \(month): \(error)")
+                    }
+                }
+            }
+        }
+        self.historyItems = loadedItems.sorted(by: { $0.date > $1.date })
     }
 }
 
 struct HistoryCellView: View {
-    let historyItem: HistoryItem
+    let historyItem: News
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(historyItem.date)
+            Text(historyItem.title)
                 .font(.headline)
+            
+            Text(formatDate(historyItem.date))
+                .font(.subheadline)
             
             Text(historyItem.content)
                 .lineLimit(2)
@@ -46,7 +67,7 @@ struct HistoryCellView: View {
                 .foregroundColor(.gray)
         }
         .padding()
-        .frame(height: 200)
+        .frame(height: 100)
         .background(Color(.secondarySystemBackground))
         .cornerRadius(10)
         .shadow(radius: 5)
