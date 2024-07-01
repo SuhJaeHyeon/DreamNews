@@ -6,96 +6,106 @@
 //
 import SwiftUI
 import WebKit
-
+import NaverThirdPartyLogin
 import FirebaseAuth
 import UserNotifications
 
 struct SettingView: View {
     @AppStorage("isNotificationEnabled") private var isNotificationEnabled: Bool = false
-    
     @Environment(\.presentationMode) var presentationMode
     @State private var isSwitchOn = false
     @State private var showWebView = false
     var body: some View {
-            NavigationView {
-                List {
-                    Section(header: Text("설정 1")) {
-                        if #available(iOS 17.0, *) {
-                            Toggle(isOn: $isSwitchOn) {
-                                Text("push 알람 오도록 설정")
-                            }
-                            .onChange(of: isNotificationEnabled, { oldValue, newValue in
-                                UserDefaults.standard.set(newValue, forKey: "isNotificationEnabled")
-                                if newValue {
-                                    scheduleIntervalNotifications()
-                                } else {
-                                    UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-                                }
-                            })
+        List {
+            Section(header: Text("설정 1")) {
+                if #available(iOS 17.0, *) {
+                    Toggle(isOn: $isSwitchOn) {
+                        Text("push 알람 오도록 설정")
+                    }
+                    .onChange(of: isNotificationEnabled, { oldValue, newValue in
+                        UserDefaults.standard.set(newValue, forKey: "isNotificationEnabled")
+                        if newValue {
+                            scheduleIntervalNotifications()
                         } else {
-                            // Fallback on earlier versions
+                            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                         }
-                        
-                        Button(action: {
-                            self.showWebView = true
-                        }) {
-                            Text("바텐더리그 열기")
-                        }
-                        .sheet(isPresented: $showWebView) {
-                            WebView(url: URL(string: "https://www.example.com")!)
-                        }
-                    }
-                    Section(header: Text("설정 2")) {
-                        Button(action: {
-                            self.showWebView = true
-                        }) {
-                            Text("웹뷰 열기")
-                        }
-                        .sheet(isPresented: $showWebView) {
-                            WebView(url: URL(string: "https://martin1216.shop")!)
-                        }
-                    }
-                    Section {
-                        HStack {
-                            Text("버전")
-                            Spacer()
-                            Text(appVersion)
-                                .foregroundColor(.gray)
-                        }
-                        Button(action: {
-                            logout()
-                            print("로그아웃 버튼 클릭됨")
-                        }) {
-                            Text("로그아웃")
-                                .foregroundColor(.red)
-                        }
-                    }
+                    })
+                } else {
+                    // Fallback on earlier versions
                 }
-                .navigationBarTitle("설정", displayMode: .inline)
-                .navigationBarItems(leading: Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
+                
+                Button(action: {
+                    self.showWebView = true
                 }) {
-                    Image(systemName: "arrow.left")
-                        .imageScale(.large)
-                })
+                    Text("바텐더리그 열기")
+                }
+                .sheet(isPresented: $showWebView) {
+                    WebView(url: URL(string: "https://www.example.com")!)
+                }
             }
-            .onAppear {
-                requestNotificationPermission()
-                if isNotificationEnabled {
-                    scheduleIntervalNotifications()
+            Section(header: Text("설정 2")) {
+                Button(action: {
+                    self.showWebView = true
+                }) {
+                    Text("웹뷰 열기")
+                }
+                .sheet(isPresented: $showWebView) {
+                    WebView(url: URL(string: "https://martin1216.shop")!)
+                }
+            }
+            Section {
+                HStack {
+                    Text("버전")
+                    Spacer()
+                    Text(appVersion)
+                        .foregroundColor(.gray)
+                }
+                Button(action: {
+                    logout()
+                    print("로그아웃 버튼 클릭됨")
+                }) {
+                    Text("로그아웃")
+                        .foregroundColor(.red)
+                }
+                Button(action: {
+                    deleteAccount()
+                    print("회원탈퇴 버튼 클릭됨")
+                }) {
+                    Text("회원탈회")
+                        .foregroundColor(.red)
                 }
             }
         }
-    
-    
-    
+        .navigationBarTitle("설정", displayMode: .inline)
+        .onAppear {
+            requestNotificationPermission()
+            if isNotificationEnabled {
+                scheduleIntervalNotifications()
+            }
+        }
+    }
     
     func logout() {
         do {
             try Auth.auth().signOut()
-            UserDefaults.standard.set(false, forKey: "isLoggedIn")
+            UserDefaults.standard.set(0, forKey: "loginType")
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
+        }
+        NaverThirdPartyLoginConnection.getSharedInstance().resetToken()
+    }
+    
+     func deleteAccount() {
+        if let user = Auth.auth().currentUser {
+            user.delete { error in
+                if let error = error {
+                    print("Firebase Error : ",error)
+                } else {
+                    print("회원탈퇴 성공!")
+                }
+            }
+        } else {
+            print("로그인 정보가 존재하지 않습니다")
         }
     }
     
@@ -145,6 +155,7 @@ struct SettingView: View {
             }
         }
     }
+    
     var appVersion: String {
            if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
                return version

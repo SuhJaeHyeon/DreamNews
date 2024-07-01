@@ -7,10 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B17BE9B2C2C5A93002A3432 /* StoryProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17BE9A2C2C5A93002A3432 /* StoryProduct.swift */; };
+		5B17BE9D2C2C5AD9002A3432 /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17BE9C2C2C5AD9002A3432 /* StoryViewModel.swift */; };
+		5B17BEA02C2D7D09002A3432 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5B17BE9F2C2D7D09002A3432 /* OpenAIKit */; };
+		5B17BEA22C2DBEF6002A3432 /* MakingStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17BEA12C2DBEF6002A3432 /* MakingStoryView.swift */; };
+		5B17BEA42C301D3A002A3432 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17BEA32C301D3A002A3432 /* TutorialView.swift */; };
+		5B57700E2C1ABFA7009DB819 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57700D2C1ABFA7009DB819 /* News.swift */; };
+		5B5770102C1AC6BD009DB819 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57700F2C1AC6BD009DB819 /* TodoView.swift */; };
+		5B5770122C1AC6CC009DB819 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5770112C1AC6CC009DB819 /* TodoItem.swift */; };
+		5B5770152C1AC6ED009DB819 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5770142C1AC6ED009DB819 /* TodoViewModel.swift */; };
+		5B604D1B2C32DEB100AAB9C1 /* HeirofLightOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5B604D192C32DEB100AAB9C1 /* HeirofLightOTFBold.otf */; };
+		5B604D1C2C32DEB100AAB9C1 /* HeirofLightOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5B604D1A2C32DEB100AAB9C1 /* HeirofLightOTFRegular.otf */; };
+		5BA97DBE2C24A01F0090E5BD /* ChatGPTSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97DBD2C24A01F0090E5BD /* ChatGPTSession.swift */; };
 		5BB365482C19CA070021091F /* ChatGPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB365472C19CA070021091F /* ChatGPTView.swift */; };
 		5BB3654A2C19D4F40021091F /* api.openai.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 5BB365492C19D4F40021091F /* api.openai.com.cer */; };
 		5BB3654C2C19E2900021091F /* SettingDreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3654B2C19E2900021091F /* SettingDreamView.swift */; };
 		5BB3654E2C19E9F20021091F /* SettingDreamView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3654D2C19E9F20021091F /* SettingDreamView2.swift */; };
+		5BB82A9F2C256D91005D3A32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82A9E2C256D91005D3A32 /* User.swift */; };
+		5BB82AA12C256E94005D3A32 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82AA02C256E94005D3A32 /* UserViewModel.swift */; };
+		5BB82AA32C256EC1005D3A32 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82AA22C256EC1005D3A32 /* ProfileEditView.swift */; };
+		5BB82AA52C256F07005D3A32 /* ProfileDreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82AA42C256F07005D3A32 /* ProfileDreamView.swift */; };
+		5BB82AA72C25705B005D3A32 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82AA62C25705B005D3A32 /* ImagePicker.swift */; };
+		5BB82AC42C257E74005D3A32 /* kakao_login_medium_narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB82AC22C257E74005D3A32 /* kakao_login_medium_narrow.png */; };
+		5BB82AC72C258721005D3A32 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82AC62C258721005D3A32 /* UserManager.swift */; };
+		5BB82AE62C25964F005D3A32 /* Secrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82AE52C25964F005D3A32 /* Secrete.swift */; };
+		5BB82AE82C259CE8005D3A32 /* SettingDreamView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82AE72C259CE8005D3A32 /* SettingDreamView3.swift */; };
+		5BB82AEA2C25A24B005D3A32 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82AE92C25A24B005D3A32 /* PurchaseView.swift */; };
+		5BB82AEC2C25A269005D3A32 /* InAppPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82AEB2C25A269005D3A32 /* InAppPurchaseManager.swift */; };
+		5BB82AF12C27C0D4005D3A32 /* Appdelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB82AF02C27C0D4005D3A32 /* Appdelegate.swift */; };
+		5BCA12BF2C2A61B500C43759 /* StoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCA12BE2C2A61B500C43759 /* StoryManager.swift */; };
+		5BCA12C12C2BBBF800C43759 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCA12C02C2BBBF800C43759 /* Util.swift */; };
+		5BCA12C42C2BF6FC00C43759 /* ChosunNm_2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BCA12C22C2BF6FC00C43759 /* ChosunNm_2.ttf */; };
+		5BCA12C52C2BF6FC00C43759 /* ChosunNm.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BCA12C32C2BF6FC00C43759 /* ChosunNm.ttf */; };
+		5BCA12C72C2C03C200C43759 /* Debuging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCA12C62C2C03C200C43759 /* Debuging.swift */; };
+		5BEC2F132C1D6BA000773AE6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC2F122C1D6BA000773AE6 /* LoadingView.swift */; };
 		5C548F12B9C6F45333935846 /* Pods_DreamMegazin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B42BCE03E5B2D6B58AA4040 /* Pods_DreamMegazin.framework */; };
 		EA655CFD2BFED85000AA7B74 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA655CFC2BFED85000AA7B74 /* MainView.swift */; };
 		EA655D002BFED8D200AA7B74 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA655CFF2BFED8D200AA7B74 /* SettingView.swift */; };
@@ -30,10 +60,39 @@
 /* Begin PBXFileReference section */
 		3B42BCE03E5B2D6B58AA4040 /* Pods_DreamMegazin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamMegazin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EC132196228824580B8374 /* Pods-DreamMegazin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamMegazin.debug.xcconfig"; path = "Target Support Files/Pods-DreamMegazin/Pods-DreamMegazin.debug.xcconfig"; sourceTree = "<group>"; };
+		5B17BE9A2C2C5A93002A3432 /* StoryProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProduct.swift; sourceTree = "<group>"; };
+		5B17BE9C2C2C5AD9002A3432 /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
+		5B17BEA12C2DBEF6002A3432 /* MakingStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingStoryView.swift; sourceTree = "<group>"; };
+		5B17BEA32C301D3A002A3432 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		5B57700D2C1ABFA7009DB819 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		5B57700F2C1AC6BD009DB819 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
+		5B5770112C1AC6CC009DB819 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		5B5770142C1AC6ED009DB819 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		5B604D192C32DEB100AAB9C1 /* HeirofLightOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HeirofLightOTFBold.otf; sourceTree = "<group>"; };
+		5B604D1A2C32DEB100AAB9C1 /* HeirofLightOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HeirofLightOTFRegular.otf; sourceTree = "<group>"; };
+		5BA97DBD2C24A01F0090E5BD /* ChatGPTSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTSession.swift; sourceTree = "<group>"; };
 		5BB365472C19CA070021091F /* ChatGPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTView.swift; sourceTree = "<group>"; };
 		5BB365492C19D4F40021091F /* api.openai.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = api.openai.com.cer; sourceTree = "<group>"; };
 		5BB3654B2C19E2900021091F /* SettingDreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDreamView.swift; sourceTree = "<group>"; };
 		5BB3654D2C19E9F20021091F /* SettingDreamView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDreamView2.swift; sourceTree = "<group>"; };
+		5BB82A9E2C256D91005D3A32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5BB82AA02C256E94005D3A32 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		5BB82AA22C256EC1005D3A32 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		5BB82AA42C256F07005D3A32 /* ProfileDreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDreamView.swift; sourceTree = "<group>"; };
+		5BB82AA62C25705B005D3A32 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5BB82AC22C257E74005D3A32 /* kakao_login_medium_narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_login_medium_narrow.png; sourceTree = "<group>"; };
+		5BB82AC62C258721005D3A32 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		5BB82AE52C25964F005D3A32 /* Secrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrete.swift; sourceTree = "<group>"; };
+		5BB82AE72C259CE8005D3A32 /* SettingDreamView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDreamView3.swift; sourceTree = "<group>"; };
+		5BB82AE92C25A24B005D3A32 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		5BB82AEB2C25A269005D3A32 /* InAppPurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseManager.swift; sourceTree = "<group>"; };
+		5BB82AF02C27C0D4005D3A32 /* Appdelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appdelegate.swift; sourceTree = "<group>"; };
+		5BCA12BE2C2A61B500C43759 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
+		5BCA12C02C2BBBF800C43759 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		5BCA12C22C2BF6FC00C43759 /* ChosunNm_2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChosunNm_2.ttf; sourceTree = "<group>"; };
+		5BCA12C32C2BF6FC00C43759 /* ChosunNm.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChosunNm.ttf; sourceTree = "<group>"; };
+		5BCA12C62C2C03C200C43759 /* Debuging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debuging.swift; sourceTree = "<group>"; };
+		5BEC2F122C1D6BA000773AE6 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7B507582BE96A4FFD3EB5045 /* Pods-DreamMegazin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamMegazin.release.xcconfig"; path = "Target Support Files/Pods-DreamMegazin/Pods-DreamMegazin.release.xcconfig"; sourceTree = "<group>"; };
 		EA655CFC2BFED85000AA7B74 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EA655CFF2BFED8D200AA7B74 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -58,12 +117,68 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C548F12B9C6F45333935846 /* Pods_DreamMegazin.framework in Frameworks */,
+				5B17BEA02C2D7D09002A3432 /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B57700C2C1ABF90009DB819 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B57700D2C1ABFA7009DB819 /* News.swift */,
+				5B5770112C1AC6CC009DB819 /* TodoItem.swift */,
+				5BA97DBD2C24A01F0090E5BD /* ChatGPTSession.swift */,
+				5BB82A9E2C256D91005D3A32 /* User.swift */,
+				5B17BE9A2C2C5A93002A3432 /* StoryProduct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B5770132C1AC6DB009DB819 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B5770142C1AC6ED009DB819 /* TodoViewModel.swift */,
+				5BB82AA02C256E94005D3A32 /* UserViewModel.swift */,
+				5BB82AA62C25705B005D3A32 /* ImagePicker.swift */,
+				5B17BE9C2C2C5AD9002A3432 /* StoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5BB82AC32C257E74005D3A32 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5BB82AC22C257E74005D3A32 /* kakao_login_medium_narrow.png */,
+				5B604D192C32DEB100AAB9C1 /* HeirofLightOTFBold.otf */,
+				5B604D1A2C32DEB100AAB9C1 /* HeirofLightOTFRegular.otf */,
+				5BCA12C22C2BF6FC00C43759 /* ChosunNm_2.ttf */,
+				5BCA12C32C2BF6FC00C43759 /* ChosunNm.ttf */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5BB82AC52C2586FC005D3A32 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5BB82AC62C258721005D3A32 /* UserManager.swift */,
+				5BB82AEB2C25A269005D3A32 /* InAppPurchaseManager.swift */,
+				5BCA12BE2C2A61B500C43759 /* StoryManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		5BB82AE42C25963F005D3A32 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5BB82AE52C25964F005D3A32 /* Secrete.swift */,
+				5BCA12C02C2BBBF800C43759 /* Util.swift */,
+				5BCA12C62C2C03C200C43759 /* Debuging.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		8C9576A4FD6A72B141C0159E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,17 +199,25 @@
 		EA655CFE2BFED88900AA7B74 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5BB365472C19CA070021091F /* ChatGPTView.swift */,
+				EAF0D2482C0ED4D200B3D011 /* HistoryDetailView.swift */,
+				EAF0D2462C0ED36200B3D011 /* HistoryView.swift */,
+				5BEC2F122C1D6BA000773AE6 /* LoadingView.swift */,
 				EAFA3BEB2BFE15B900FAC58C /* LoginView.swift */,
 				EA655CFC2BFED85000AA7B74 /* MainView.swift */,
-				EA655CFF2BFED8D200AA7B74 /* SettingView.swift */,
-				EAF0D23E2C0E992D00B3D011 /* SignUpView.swift */,
+				5B17BEA12C2DBEF6002A3432 /* MakingStoryView.swift */,
 				EAF0D2422C0EC61800B3D011 /* MyPageView.swift */,
 				EAF0D2442C0ED35400B3D011 /* NewsView.swift */,
-				EAF0D2462C0ED36200B3D011 /* HistoryView.swift */,
-				EAF0D2482C0ED4D200B3D011 /* HistoryDetailView.swift */,
-				5BB365472C19CA070021091F /* ChatGPTView.swift */,
+				5BB82AA42C256F07005D3A32 /* ProfileDreamView.swift */,
+				5BB82AA22C256EC1005D3A32 /* ProfileEditView.swift */,
+				5BB82AE92C25A24B005D3A32 /* PurchaseView.swift */,
 				5BB3654B2C19E2900021091F /* SettingDreamView.swift */,
 				5BB3654D2C19E9F20021091F /* SettingDreamView2.swift */,
+				5BB82AE72C259CE8005D3A32 /* SettingDreamView3.swift */,
+				EA655CFF2BFED8D200AA7B74 /* SettingView.swift */,
+				EAF0D23E2C0E992D00B3D011 /* SignUpView.swift */,
+				5B57700F2C1AC6BD009DB819 /* TodoView.swift */,
+				5B17BEA32C301D3A002A3432 /* TutorialView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -120,14 +243,20 @@
 		EAFA3BE82BFE15B900FAC58C /* DreamMegazin */ = {
 			isa = PBXGroup;
 			children = (
+				5BB82AE42C25963F005D3A32 /* Util */,
+				5BB82AC52C2586FC005D3A32 /* Manager */,
+				5BB82AC32C257E74005D3A32 /* Resource */,
+				5B5770132C1AC6DB009DB819 /* ViewModel */,
+				5B57700C2C1ABF90009DB819 /* Model */,
 				EA655CFE2BFED88900AA7B74 /* UI */,
 				EAFA3BF72BFE18EF00FAC58C /* Info.plist */,
 				EAF0D2402C0EC05500B3D011 /* GoogleService-Info.plist */,
 				5BB365492C19D4F40021091F /* api.openai.com.cer */,
-				EAFA3BE92BFE15B900FAC58C /* DreamMegazinApp.swift */,
 				EAFA3BED2BFE15BC00FAC58C /* Assets.xcassets */,
+				EAFA3BE92BFE15B900FAC58C /* DreamMegazinApp.swift */,
 				EA655D032BFEEDE400AA7B74 /* dream.txt */,
 				EAFA3BEF2BFE15BC00FAC58C /* Preview Content */,
+				5BB82AF02C27C0D4005D3A32 /* Appdelegate.swift */,
 			);
 			path = DreamMegazin;
 			sourceTree = "<group>";
@@ -152,12 +281,16 @@
 				EAFA3BE32BFE15B900FAC58C /* Frameworks */,
 				EAFA3BE42BFE15B900FAC58C /* Resources */,
 				28E39027AF0D08FE9573D148 /* [CP] Embed Pods Frameworks */,
+				EC9F5167DE65088504AB0D3B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DreamMegazin;
+			packageProductDependencies = (
+				5B17BE9F2C2D7D09002A3432 /* OpenAIKit */,
+			);
 			productName = DreamMegazin;
 			productReference = EAFA3BE62BFE15B900FAC58C /* DreamMegazin.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +319,9 @@
 				Base,
 			);
 			mainGroup = EAFA3BDD2BFE15B900FAC58C;
+			packageReferences = (
+				5B17BE9E2C2D7D09002A3432 /* XCRemoteSwiftPackageReference "OpenAIKit" */,
+			);
 			productRefGroup = EAFA3BE72BFE15B900FAC58C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -202,8 +338,13 @@
 			files = (
 				EA655D042BFEEDE400AA7B74 /* dream.txt in Resources */,
 				5BB3654A2C19D4F40021091F /* api.openai.com.cer in Resources */,
+				5B604D1B2C32DEB100AAB9C1 /* HeirofLightOTFBold.otf in Resources */,
 				EAF0D2412C0EC05500B3D011 /* GoogleService-Info.plist in Resources */,
+				5BCA12C52C2BF6FC00C43759 /* ChosunNm.ttf in Resources */,
+				5BB82AC42C257E74005D3A32 /* kakao_login_medium_narrow.png in Resources */,
+				5BCA12C42C2BF6FC00C43759 /* ChosunNm_2.ttf in Resources */,
 				EAFA3BF12BFE15BC00FAC58C /* Preview Assets.xcassets in Resources */,
+				5B604D1C2C32DEB100AAB9C1 /* HeirofLightOTFRegular.otf in Resources */,
 				EAFA3BEE2BFE15BC00FAC58C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +391,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EC9F5167DE65088504AB0D3B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DreamMegazin/Pods-DreamMegazin-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DreamMegazin/Pods-DreamMegazin-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DreamMegazin/Pods-DreamMegazin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,18 +415,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA97DBE2C24A01F0090E5BD /* ChatGPTSession.swift in Sources */,
+				5BB82AE62C25964F005D3A32 /* Secrete.swift in Sources */,
+				5B5770152C1AC6ED009DB819 /* TodoViewModel.swift in Sources */,
 				5BB365482C19CA070021091F /* ChatGPTView.swift in Sources */,
 				EA655CFD2BFED85000AA7B74 /* MainView.swift in Sources */,
+				5B5770102C1AC6BD009DB819 /* TodoView.swift in Sources */,
+				5BEC2F132C1D6BA000773AE6 /* LoadingView.swift in Sources */,
+				5B17BEA22C2DBEF6002A3432 /* MakingStoryView.swift in Sources */,
+				5BB82AA72C25705B005D3A32 /* ImagePicker.swift in Sources */,
 				5BB3654E2C19E9F20021091F /* SettingDreamView2.swift in Sources */,
 				EAF0D2472C0ED36200B3D011 /* HistoryView.swift in Sources */,
 				EAF0D23F2C0E992D00B3D011 /* SignUpView.swift in Sources */,
+				5BB82AEC2C25A269005D3A32 /* InAppPurchaseManager.swift in Sources */,
+				5BB82AE82C259CE8005D3A32 /* SettingDreamView3.swift in Sources */,
+				5BB82AEA2C25A24B005D3A32 /* PurchaseView.swift in Sources */,
+				5BCA12C72C2C03C200C43759 /* Debuging.swift in Sources */,
 				EA655D002BFED8D200AA7B74 /* SettingView.swift in Sources */,
 				EAF0D2492C0ED4D200B3D011 /* HistoryDetailView.swift in Sources */,
 				EAF0D2452C0ED35400B3D011 /* NewsView.swift in Sources */,
 				EAFA3BEC2BFE15B900FAC58C /* LoginView.swift in Sources */,
+				5B17BEA42C301D3A002A3432 /* TutorialView.swift in Sources */,
+				5BB82AA12C256E94005D3A32 /* UserViewModel.swift in Sources */,
+				5B5770122C1AC6CC009DB819 /* TodoItem.swift in Sources */,
 				5BB3654C2C19E2900021091F /* SettingDreamView.swift in Sources */,
+				5BB82AF12C27C0D4005D3A32 /* Appdelegate.swift in Sources */,
+				5B17BE9B2C2C5A93002A3432 /* StoryProduct.swift in Sources */,
+				5B17BE9D2C2C5AD9002A3432 /* StoryViewModel.swift in Sources */,
+				5BB82AC72C258721005D3A32 /* UserManager.swift in Sources */,
+				5BCA12BF2C2A61B500C43759 /* StoryManager.swift in Sources */,
+				5BB82AA32C256EC1005D3A32 /* ProfileEditView.swift in Sources */,
 				EAFA3BEA2BFE15B900FAC58C /* DreamMegazinApp.swift in Sources */,
+				5BB82AA52C256F07005D3A32 /* ProfileDreamView.swift in Sources */,
+				5B57700E2C1ABFA7009DB819 /* News.swift in Sources */,
+				5BCA12C12C2BBBF800C43759 /* Util.swift in Sources */,
 				EAF0D2432C0EC61800B3D011 /* MyPageView.swift in Sources */,
+				5BB82A9F2C256D91005D3A32 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,30 +580,33 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 56EC132196228824580B8374 /* Pods-DreamMegazin.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = Planner;
+				ASSETCATALOG_COMPILER_APPICON_NAME = DreamNews;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DreamMegazin/Preview Content\"";
-				DEVELOPMENT_TEAM = R8D3UG9283;
+				DEVELOPMENT_TEAM = C4S4Y66W52;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamMegazin/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "오늘의 꿈";
+				INFOPLIST_KEY_CFBundleDisplayName = "미래신문";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "앱이 캘린더에 접근하여 이벤트를 추가할 수 있도록 허용해주세요.";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "앱이 리마인더에 접근하여 알림을 추가할 수 있도록 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = zone.cloudmartin.DreamMegazin1;
+				PRODUCT_BUNDLE_IDENTIFIER = zone.cloudmartin.DreamMagazine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -433,30 +618,33 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B507582BE96A4FFD3EB5045 /* Pods-DreamMegazin.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = Planner;
+				ASSETCATALOG_COMPILER_APPICON_NAME = DreamNews;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DreamMegazin/Preview Content\"";
-				DEVELOPMENT_TEAM = R8D3UG9283;
+				DEVELOPMENT_TEAM = C4S4Y66W52;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamMegazin/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "오늘의 꿈";
+				INFOPLIST_KEY_CFBundleDisplayName = "미래신문";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "앱이 캘린더에 접근하여 이벤트를 추가할 수 있도록 허용해주세요.";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "앱이 리마인더에 접근하여 알림을 추가할 수 있도록 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = zone.cloudmartin.DreamMegazin1;
+				PRODUCT_BUNDLE_IDENTIFIER = zone.cloudmartin.DreamMagazine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -486,6 +674,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B17BE9E2C2D7D09002A3432 /* XCRemoteSwiftPackageReference "OpenAIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OpenDive/OpenAIKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B17BE9F2C2D7D09002A3432 /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B17BE9E2C2D7D09002A3432 /* XCRemoteSwiftPackageReference "OpenAIKit" */;
+			productName = OpenAIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EAFA3BDE2BFE15B900FAC58C /* Project object */;
 }

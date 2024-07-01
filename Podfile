@@ -8,5 +8,10 @@ target 'DreamMegazin' do
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
   pod 'Alamofire'
-  pod 'OpenAIKit'
+  pod 'KakaoSDK'
+  pod 'naveridlogin-sdk-ios'
+  pod 'GoogleSignIn'
+  pod 'GoogleSignInSwiftSupport'
+  pod 'CocoaLumberjack/Swift'
 end
+

@@ -6,16 +6,24 @@
 //
 
 import Foundation
+import Combine
 import EventKit
 
 class TodoViewModel: ObservableObject {
     @Published var todoItems: [TodoItem] = []
+    @Published var newTaskTitle: String = ""
+    
     private var eventStore = EKEventStore()
+    private let fileURL: URL
     
     init() {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        fileURL = documentsDirectory.appendingPathComponent("todoItems.json")
+        
+        loadTodoItems()
         requestCalendarAccess()
     }
-
+    
     func requestCalendarAccess() {
         eventStore.requestAccess(to: .event) { granted, error in
             if granted {
@@ -36,25 +44,50 @@ class TodoViewModel: ObservableObject {
             let events = eventStore.events(matching: predicate)
             
             DispatchQueue.main.async {
-                self.todoItems += events.map { event in
-                    TodoItem(id: UUID(), title: event.title, isCompleted: false)
+                for event in events {
+                    if !self.todoItems.contains(where: { $0.eventIdentifier == event.eventIdentifier }) {
+                        self.todoItems.append(TodoItem(title: event.title, isCompleted: false, eventIdentifier: event.eventIdentifier))
+                    }
                 }
+                self.saveTodoItems()
             }
         }
     }
 
-    func addTodoItem(title: String) {
-        let newItem = TodoItem(id: UUID(), title: title, isCompleted: false)
-        todoItems.append(newItem)
+    func addNewTask() {
+        guard !newTaskTitle.isEmpty else { return }
+        todoItems.append(TodoItem(id: UUID(), title: newTaskTitle, isCompleted: false))
+        newTaskTitle = ""
+        saveTodoItems()
     }
     
-    func toggleCompletion(for item: TodoItem) {
+    func completeTask(_ item: TodoItem) {
         if let index = todoItems.firstIndex(where: { $0.id == item.id }) {
             todoItems[index].isCompleted.toggle()
+            saveTodoItems()
         }
     }
     
-    func removeTodoItem(at offsets: IndexSet) {
-        todoItems.remove(atOffsets: offsets)
+    func removeTodoItem(_ item: TodoItem) {
+        todoItems.removeAll { $0.id == item.id }
+        saveTodoItems()
+    }
+    
+    private func saveTodoItems() {
+        do {
+            let data = try JSONEncoder().encode(todoItems)
+            try data.write(to: fileURL)
+        } catch {
+            print("Failed to save todo items: \(error)")
+        }
+    }
+    
+    private func loadTodoItems() {
+        do {
+            let data = try Data(contentsOf: fileURL)
+            todoItems = try JSONDecoder().decode([TodoItem].self, from: data)
+        } catch {
+            print("Failed to load todo items: \(error)")
+        }
     }
 }
